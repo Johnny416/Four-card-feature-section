@@ -24,13 +24,13 @@ body {
   max-width: 600px;
   margin: auto;
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 3rem;
   letter-spacing: 0.03rem;
 }
 
 #main-header h1 {
   color: hsl(234, 12%, 34%);
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 #main-header p {
@@ -41,7 +41,7 @@ body {
 
 /* Showcase */
 #showcase {
-  margin-top: 4rem;
+  margin-top: 3rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
@@ -49,7 +49,7 @@ body {
 
 .box {
   width: 85%;
-  height: 15rem;
+  height: 14rem;
   border-radius: 5px;
   margin: auto;
   box-shadow: 0px 32px 64px -25px hsl(234, 12%, 34%);
@@ -65,9 +65,8 @@ body {
   color: hsl(234, 12%, 34%);
 }
 
-.box img {
-  margin-top: 2rem;
-  text-align: right;
+.box .box-container img {
+  margin: 2rem 0 0 14rem;
 }
 
 #supervisor-box {
@@ -84,9 +83,39 @@ body {
   border-top: 5px solid hsl(212, 86%, 64%);
 }
 
+@media (max-width: 1024px) {
+  .box .box-container img {
+    margin: 1rem 0 0 10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 625px;
+    margin: auto;
+  }
+
+  #showcase {
+    display: block;
+  }
+
+  #showcase .box {
+    margin-bottom: 2rem;
+  }
+
+  .box {
+    width: 90%;
+  }
+
+  .box .box-container img {
+    margin: 1.5rem 0 0 23rem;
+  }
+}
+
 @media (max-width: 425px) {
   .container {
     max-width: 350px;
+    margin: auto;
   }
 
   #main-header h1 {
@@ -107,5 +136,15 @@ body {
 
   .box {
     width: 90%;
+  }
+
+  .box .box-container img {
+    margin: 1rem 0 0 12rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .box .box-container img {
+    margin: 1rem 0 0 10rem;
   }
 }
